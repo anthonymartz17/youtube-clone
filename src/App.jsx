@@ -11,28 +11,28 @@ import "./App.css";
 
 function App() {
 	return (
-		<div className="w-screen">
-			<TopBar />
+		<Router>
+			<div className="w-screen">
+				<TopBar />
 
-			<div className="main__wrapper">
-				<aside className="aside">
-					side bar
-					{/* 
+				<div className="main__wrapper">
+					<aside className="aside">
+						side bar
+						{/* 
 				sidebar component goes here
 				*/}
-				</aside>
-				<main className="main">
-					<Router>
+					</aside>
+					<main className="main">
 						<Routes>
 							<Route path="/" element={<Home />} />
 							<Route path="/about" element={<About />} />
 							<Route path="/results" element={<Results />} />
 							<Route path="/watch:id" element={<VideoPlayBack />} />
 						</Routes>
-					</Router>
-				</main>
+					</main>
+				</div>
 			</div>
-		</div>
+		</Router>
 	);
 }
 
