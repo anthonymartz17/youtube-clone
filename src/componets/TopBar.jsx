@@ -5,7 +5,7 @@ export default function TopBar() {
 		<header>
 			<nav className={classes.nav}>
 				<div className="flex gap-2 items-center">
-					<div className={classes.nav__toggler}></div>
+					<div><i className="fa-solid fa-bars"></i></div>
 					<div>YouToo</div>
 				</div>
 				<form className={classes.nav__searchbar}>

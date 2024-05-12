@@ -1,0 +1,39 @@
+.off-screen-menu{
+    background-color: rbg(34,37,49);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+}
+.off-screen-menu.active{
+    right: 0;
+}
+
+.fa-solid{
+    color: rgb(0, 0, 0);
+    font-size:30px ;
+}
+
+.ham-menu_li{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin-bottom: 45px;
+    text-align: center;
+}
+.ham-menu_li_image{
+    height: 23px;
+    font-size: 23px;
+    margin-left: 45px;
+}
+.ul-for-sidebar{
+    padding: 15px;
+}
