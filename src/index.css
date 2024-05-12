@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-	--primary: #151515;
-	--secondary: #0c0c0c;
+	--primary: #ffffff;
+	--secondary: #EEEDEB;
+	--dark:#222831;
 	--accent: #e72929;
 	--light: #f5f7f8;
 }
@@ -18,7 +19,7 @@
 	grid-template-columns: 150px 1fr;
 
 	height: 90vh;
-	background-color: #A91D3A;
+	background-color: var(--primary);
 }
 
 body {

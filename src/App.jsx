@@ -12,6 +12,7 @@ import "./App.css";
 
 function App() {
 	return (
+
 	<Router>
 		<div className="w-screen">
 			<TopBar />
@@ -21,16 +22,37 @@ function App() {
 				<Navigation/>
 				</aside>
 				<main className="main">
+
+	
+			<div className="w-screen">
+				<TopBar />
+
+				<div className="main__wrapper">
+					<aside className="aside">
+						side bar
+						{/* 
+				sidebar component goes here
+				*/}
+					</aside>
+					<main className="main">
+
 						<Routes>
 							<Route path="/" element={<Home />} />
 							<Route path="/about" element={<About />} />
 							<Route path="/results" element={<Results />} />
 							<Route path="/watch:id" element={<VideoPlayBack />} />
 						</Routes>
+
 				</main>
 			</div>
 		</div>
-	</Router>
+
+
+					</main>
+				</div>
+			</div>
+		</Router>
+
 	);
 }
 

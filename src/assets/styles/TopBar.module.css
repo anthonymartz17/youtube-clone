@@ -1,7 +1,7 @@
 .nav{
-  background-color: var(--accent);
+  background-color: var(--primary);
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 200px 1fr;
   align-items: center;
   height: 60px;
   padding-inline:2em;
@@ -13,8 +13,18 @@
   background: grey;
 }
 
-.nav__searchbar{
+.nav__form{
   display: flex;
   justify-content: center;
+}
+
+.nav__searchbar{
+  all:unset;
+  background: var(--secondary);
+  border: .5px solid rgba(255, 255, 255, 0.58);
+  width: 30em;
+  padding: 8px;
+  border-radius: 50px;
+  color: var(--light);
 }
 
