@@ -8,8 +8,8 @@ export default function TopBar() {
 					<div className={classes.nav__toggler}></div>
 					<div>YouToo</div>
 				</div>
-				<form className={classes.nav__searchbar}>
-					<input type="text" placeholder="Search" />
+				<form className={classes.nav__form}>
+					<input className={classes.nav__searchbar} type="text" placeholder="Search" />
 				</form>
 			</nav>
 		</header>

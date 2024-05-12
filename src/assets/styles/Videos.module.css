@@ -1,0 +1,22 @@
+.videos {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1em;
+}
+
+/* Preview component */
+
+.preview__thumbnail-container img {
+	border-radius: 10px;
+}
+.preview__thumbnail-container img {
+	border-radius: 10px;
+	max-width: 100%;
+}
+
+.preview__avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	max-width: 100%;
+}
