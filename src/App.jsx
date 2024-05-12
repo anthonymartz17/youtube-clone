@@ -20,14 +20,12 @@ function App() {
 						<Navigation />
 					</aside>
 					<main className="main">
-						<div className="main__wrapper">
-							<Routes>
-								<Route path="/" element={<Home />} />
-								<Route path="/about" element={<About />} />
-								<Route path="/results" element={<Results />} />
-								<Route path="/watch:id" element={<VideoPlayBack />} />
-							</Routes>
-						</div>
+						<Routes>
+							<Route path="/" element={<Home />} />
+							<Route path="/about" element={<About />} />
+							<Route path="/results" element={<Results />} />
+							<Route path="/watch/:id" element={<VideoPlayBack />} />
+						</Routes>
 					</main>
 				</div>
 			</div>

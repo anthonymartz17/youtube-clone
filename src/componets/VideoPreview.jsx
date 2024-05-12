@@ -1,13 +1,13 @@
 import React from "react";
 import classes from "../assets/styles/Videos.module.css";
+import { Link } from "react-router-dom";
 export default function VideoPreview({ videoPreview }) {
 	return (
-		<div className={classes.preview}>
+		<Link to={`/watch/${videoPreview.id}`} className={classes.preview}>
 			<div className={classes.preview__thumbnailContainer}>
 				<img src={videoPreview.snippet.thumbnails.standard.url} alt="" />
 			</div>
 			<div className={classes.preview__videoDescription}>
-				
 				<img
 					className={classes.preview__avatar}
 					src={videoPreview.snippet.thumbnails.default.url}
@@ -17,7 +17,7 @@ export default function VideoPreview({ videoPreview }) {
 				<div className={classes.preview__description}>
 					<h4 className={classes.preview__headerTitle}>
 						{videoPreview.snippet.title.length > 50
-							? videoPreview.snippet.title.slice(0, 50)+'...'
+							? videoPreview.snippet.title.slice(0, 50) + "..."
 							: videoPreview.snippet.title}
 					</h4>
 					<p className={classes.preview__channelTitle}>
@@ -28,6 +28,6 @@ export default function VideoPreview({ videoPreview }) {
 					</p>
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 }
