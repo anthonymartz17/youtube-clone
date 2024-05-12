@@ -12,47 +12,26 @@ import "./App.css";
 
 function App() {
 	return (
-
-	<Router>
-		<div className="w-screen">
-			<TopBar />
-
-			<div className="main__wrapper">
-				<aside className="aside">
-				<Navigation/>
-				</aside>
-				<main className="main">
-
-	
+		<Router>
 			<div className="w-screen">
 				<TopBar />
-
 				<div className="main__wrapper">
 					<aside className="aside">
-						side bar
-						{/* 
-				sidebar component goes here
-				*/}
+						<Navigation />
 					</aside>
 					<main className="main">
-
-						<Routes>
-							<Route path="/" element={<Home />} />
-							<Route path="/about" element={<About />} />
-							<Route path="/results" element={<Results />} />
-							<Route path="/watch:id" element={<VideoPlayBack />} />
-						</Routes>
-
-				</main>
-			</div>
-		</div>
-
-
+						<div className="main__wrapper">
+							<Routes>
+								<Route path="/" element={<Home />} />
+								<Route path="/about" element={<About />} />
+								<Route path="/results" element={<Results />} />
+								<Route path="/watch:id" element={<VideoPlayBack />} />
+							</Routes>
+						</div>
 					</main>
 				</div>
 			</div>
 		</Router>
-
 	);
 }
 

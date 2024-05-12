@@ -5,18 +5,16 @@ export default function TopBar() {
 	return (
 		<header>
 			<nav className={classes.nav}>
-				<div className="flex gap-2 items-center">
-
-
-				<div><i className="fa-solid fa-bars"></i></div>
+				<div className="flex gap-2 items-center ">
+					<div>
+						<i className="fa-solid fa-bars"></i>
+					</div>
 
 					<Link to="/">
 						<div>
-						
-							<img src={logo} alt="" style={{ width: "100px" }} />
+							<img src={logo} alt="" style={{ width: "80px" }} />
 						</div>
 					</Link>
-
 				</div>
 				<form className={classes.nav__form}>
 					<input
