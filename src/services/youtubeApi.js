@@ -1,0 +1,1 @@
+import.meta.env.VITE_YOUTUBE_KEY
