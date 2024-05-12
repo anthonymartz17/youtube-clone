@@ -1,0 +1,20 @@
+.nav{
+  background-color: var(--accent);
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+  height: 60px;
+  padding-inline:2em;
+}
+
+.nav__toggler{
+  width: 40px;
+  height: 40px;
+  background: grey;
+}
+
+.nav__searchbar{
+  display: flex;
+  justify-content: center;
+}
+
