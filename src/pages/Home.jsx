@@ -1,9 +1,7 @@
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getVideos } from "../services/youtubeApi";
 import VideoPreview from "../componets/VideoPreview";
 import classes from "../assets/styles/Videos.module.css";
-import VideoList from "../componets/VideoList";
 import { TagBar } from "../componets/TagBar";
 
 export default function Home() {
@@ -14,29 +12,24 @@ export default function Home() {
 	async function getInitialList() {
 		try {
 			const videos = await getVideos();
-        console.log(videos)
+			console.log(videos);
 			setVideos(videos);
 		} catch (error) {
 			console.log(error);
 		}
 	}
+
+	useEffect(() => {
+		getInitialList();
+	}, []);
 	return (
-
 		<div>
-			<button onClick={getInitialList} className="bg-blue-800 w-80">
-				test
-			</button>
-
+			<TagBar />
 			<div className={classes.videos}>
-				{videos.items.map((ele, idx) => {
-					return <VideoPreview videoPreview={ele} key={idx} />;
+				{videos.items.map((ele) => {
+					return <VideoPreview videoPreview={ele} key={ele.id.videoId} />;
 				})}
 			</div>
-
-		<div className="">
-			<TagBar />
-			<VideoList />
-
 		</div>
 	);
 }
