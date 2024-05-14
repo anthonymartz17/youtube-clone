@@ -22,6 +22,14 @@
 	background-color: var(--primary);
 }
 
+.main__wrapper-toggle{
+	display: grid;
+	grid-template-columns: 1fr;
+
+	height: 90vh;
+	background-color: var(--primary);
+}
+
 body {
 	background: var(--primary);
 }

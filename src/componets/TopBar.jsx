@@ -1,13 +1,15 @@
 import classes from "../assets/styles/TopBar.module.css";
 import logo from "../assets/youtoo-icon.svg";
 import { Link } from "react-router-dom";
-export default function TopBar() {
+import { useState } from "react";
+
+export default function TopBar({setCol,col}) {
 	return (
 		<header>
 			<nav className={classes.nav}>
 				<div className="flex gap-2 items-center ">
 					<div>
-						<i className="fa-solid fa-bars"></i>
+						<i onClick={()=>setCol(!col)} className="fa-solid fa-bars cursor-pointer"></i>
 					</div>
 
 					<Link to="/">

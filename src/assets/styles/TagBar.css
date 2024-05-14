@@ -1,0 +1,31 @@
+.tagbar-list{
+    display: flex;
+}
+.tagbar-list_li{
+    display: flex;
+    font-family: sans-serif;
+    height: 32px;
+    border: none 1px gray;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    font-weight: bold;
+    align-items: center;
+    line-height: 20px;
+    margin-bottom: 12px;
+    margin-left: 0;
+    margin-right: 12px;
+    margin-top: 12px;
+    min-width: 12px;
+    padding-bottom: 0px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 0px;
+    cursor: pointer;
+    position: relative;
+    left: 20px;
+    justify-content: center;
+}
+.tagbar-list_li:hover{
+    background-color: gray;
+}
