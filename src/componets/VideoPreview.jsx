@@ -1,18 +1,29 @@
 import React from "react";
 import classes from "../assets/styles/Videos.module.css";
 import { Link } from "react-router-dom";
-export default function VideoPreview({ videoPreview }) {
+export default function VideoPreview({ videoPreview, isLandscape = true }) {
 	return (
-		<Link to={`/watch/${videoPreview.id}`} className={classes.preview}>
+		<Link
+			to={`/watch/${videoPreview.id}`}
+			className={isLandscape ? classes.preview : classes.preview__vertical}
+		>
 			<div className={classes.preview__thumbnailContainer}>
-				<img src={videoPreview.snippet.thumbnails.standard.url} alt="" />
+				<img src={videoPreview.snippet.thumbnails.default.url} alt="" />
 			</div>
-			<div className={classes.preview__videoDescription}>
-				<img
-					className={classes.preview__avatar}
-					src={videoPreview.snippet.thumbnails.default.url}
-					alt=""
-				/>
+			<div
+				className={
+					isLandscape
+						? classes.preview__videoDescription
+						: classes.preview__videoDescriptionVertical
+				}
+			>
+				{isLandscape && (
+					<img
+						className={classes.preview__avatar}
+						src={videoPreview.snippet.thumbnails.high.url}
+						alt=""
+					/>
+				)}
 
 				<div className={classes.preview__description}>
 					<h4 className={classes.preview__headerTitle}>

@@ -14,20 +14,27 @@
 	display: grid;
 	justify-content: center;
 	max-width: 20em;
-
 	padding: 0;
+}
+
+.preview__vertical{
+	display: flex;
+	gap: .5em;
 }
 
 .preview__thumbnailContainer {
 	border-radius: 10px;
 	width: 200px;
 	margin-bottom: 10px;
-	 
 }
 .preview__thumbnailContainer img {
 	border-radius: 10px;
 	max-width: 100%;
 	object-fit: contain;
+}
+.preview__videoDescriptionVertical {
+	display: grid;
+	grid-template-columns: 1fr;
 }
 .preview__videoDescription {
 	display: grid;
@@ -35,8 +42,14 @@
 }
 .preview__headerTitle {
 	font-weight: 700;
-	color: #31363F;
+	color: #31363f;
 }
+
+.preview__channelTitle_vertical {
+	font-weight: 700;
+	color: #31363f;
+}
+
 
 .preview__thumbnail-container img {
 	border-radius: 10px;

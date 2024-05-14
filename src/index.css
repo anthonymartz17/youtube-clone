@@ -17,7 +17,6 @@
 .main__wrapper {
 	display: grid;
 	grid-template-columns: 150px 1fr;
-
 	height: 90vh;
 	background-color: var(--primary);
 }

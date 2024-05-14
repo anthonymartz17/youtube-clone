@@ -1,0 +1,25 @@
+.video_playback{
+   display: grid;
+   gap: 1em;
+   grid-template-columns: 1fr 30%;
+   padding: 1em 4em;
+}
+
+.player{
+ 
+}
+
+.player__headerTitle{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.player__channel{
+  display: flex;
+  gap: .5em;
+}
+.player__avatar {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	max-width: 100%;
+}
