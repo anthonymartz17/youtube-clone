@@ -1,7 +1,11 @@
+
 import { useState } from "react";
 import { getVideos } from "../services/youtubeApi";
 import VideoPreview from "../componets/VideoPreview";
 import classes from "../assets/styles/Videos.module.css";
+import VideoList from "../componets/VideoList";
+import { TagBar } from "../componets/TagBar";
+
 export default function Home() {
 	const [videos, setVideos] = useState({
 		items: [],
@@ -17,6 +21,7 @@ export default function Home() {
 		}
 	}
 	return (
+
 		<div>
 			<button onClick={getInitialList} className="bg-blue-800 w-80">
 				test
@@ -27,6 +32,11 @@ export default function Home() {
 					return <VideoPreview videoPreview={ele} key={idx} />;
 				})}
 			</div>
+
+		<div className="">
+			<TagBar />
+			<VideoList />
+
 		</div>
 	);
 }
