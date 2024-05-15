@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function VideoPreview({ videoPreview, isLandscape = true }) {
 	return (
 		<Link
-			to={`/watch/${videoPreview.id}`}
+			to={`/watch/${videoPreview.id.videoId}`}
 			className={isLandscape ? classes.preview : classes.preview__vertical}
 		>
 			<div className={classes.preview__thumbnailContainer}>

@@ -6,6 +6,7 @@ const URL = import.meta.env.VITE_YOUTUBE_SEARCH;
 const MOST_POPULAR_URL = import.meta.env.VITE_YOUTUBE_MOST_POPULAR;
 
 export async function getVideos(query = "recommended videos", maxResults = 20) {
+	console.log(API_KEY)
 	try {
 		const response = await axios.get(URL, {
 			params: {
@@ -16,8 +17,11 @@ export async function getVideos(query = "recommended videos", maxResults = 20) {
 				q: query,
 			},
 		});
+		console.log(response,'responessssss')
 		return response.data;
-	} catch (error) {}
+	} catch (error) {
+		console.log(error)
+	}
 }
 
 export async function getVideoById(id) {

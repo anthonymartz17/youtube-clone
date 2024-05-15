@@ -1,43 +1,22 @@
+import { useEffect, useState } from "react";
 
-import { useState } from "react";
-import { getVideos } from "../services/youtubeApi";
 import VideoPreview from "../componets/VideoPreview";
 import classes from "../assets/styles/Videos.module.css";
-import VideoList from "../componets/VideoList";
 import { TagBar } from "../componets/TagBar";
+import { Link } from "react-router-dom";
 
-export default function Home() {
-	const [videos, setVideos] = useState({
-		items: [],
-	});
+export default function Home({ videos }) {
 
-	async function getInitialList() {
-		try {
-			const videos = await getVideos();
-        console.log(videos)
-			setVideos(videos);
-		} catch (error) {
-			console.log(error);
-		}
-	}
 	return (
-
 		<div>
-				<TagBar />
-			<button onClick={getInitialList} className="bg-blue-800 w-80">
-				test
-			</button>
 
+			<TagBar />
 			<div className={classes.videos}>
-				{videos.items.map((ele, idx) => {
-					return <VideoPreview videoPreview={ele} key={idx} />;
+				{videos.items.map((ele) => {
+					return <VideoPreview videoPreview={ele} key={ele.id.videoId} />;
 				})}
 			</div>
 
-			<div className="">
-				<VideoList />
-
-			</div>
 		</div>
 	);
 }
