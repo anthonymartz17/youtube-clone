@@ -8,7 +8,7 @@ export function Navigation(){
             <ul className="ul-for-sidebar">
                 <Link to="/"><i className="fa-solid fa-house ham-menu_li_image"></i>
                 <li className="ham-menu_li">Home</li></Link>
-                <Link to="/about"><i class="fa-solid fa-circle-info ham-menu_li_image"></i><li className="ham-menu_li">About</li></Link>
+                <Link to="/about"><i className="fa-solid fa-circle-info ham-menu_li_image"></i><li className="ham-menu_li">About</li></Link>
                 <img className="ham-menu_li_image" src="src\Images\youtube-shorts-logo-15252.png"></img>
                 <li className="ham-menu_li">Shorts</li>
                 <img className="ham-menu_li_image" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3264373/subscriptions-icon-md.png"></img>
