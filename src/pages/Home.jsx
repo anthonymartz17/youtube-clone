@@ -23,6 +23,7 @@ export default function Home() {
 	return (
 
 		<div>
+				<TagBar />
 			<button onClick={getInitialList} className="bg-blue-800 w-80">
 				test
 			</button>
@@ -33,10 +34,10 @@ export default function Home() {
 				})}
 			</div>
 
-		<div className="">
-			<TagBar />
-			<VideoList />
+			<div className="">
+				<VideoList />
 
+			</div>
 		</div>
 	);
 }
