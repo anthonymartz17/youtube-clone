@@ -7,7 +7,7 @@ const URL = import.meta.env.VITE_YOUTUBE_SEARCH;
 export async function getVideos(query = "recommended videos", maxResults = 20) {
 	console.log(API_KEY)
 	try {
-		const response = await axios.get(URL, {
+		const response = await axios.get(`${URL}/search`, {
 			params: {
 				key: API_KEY,
 				part: "snippet",
@@ -16,7 +16,7 @@ export async function getVideos(query = "recommended videos", maxResults = 20) {
 				q: query,
 			},
 		});
-		console.log(response,'responessssss')
+		
 		return response.data;
 	} catch (error) {
 		console.log(error)
