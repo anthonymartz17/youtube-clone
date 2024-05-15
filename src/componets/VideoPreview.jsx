@@ -8,7 +8,7 @@ export default function VideoPreview({ videoPreview, isLandscape = true }) {
 			className={isLandscape ? classes.preview : classes.preview__vertical}
 		>
 			<div className={classes.preview__thumbnailContainer}>
-				<img src={videoPreview.snippet.thumbnails.default.url} alt="" />
+				<img src={videoPreview.snippet.thumbnails.high.url} alt="" />
 			</div>
 			<div
 				className={

@@ -18,9 +18,9 @@ function App() {
 		items: [],
 	});
 
-	async function getInitialList() {
+	async function getVideosList(q) {
 		try {
-			const fetchedVideos = await getVideos();
+			const fetchedVideos = await getVideos(q);
 
 			setVideos(fetchedVideos);
 		} catch (error) {
@@ -30,14 +30,14 @@ function App() {
 
 	useEffect(() => {
 		if (videos.items.length === 0) {
-			getInitialList();
+			getVideosList();
 		}
 	}, []);
 
 	return (
 		<Router>
 			<div className="w-screen">
-				<TopBar col={col} setCol={setCol} />
+				<TopBar col={col} setCol={setCol} onGetVideosList={getVideosList} />
 				<div className={col ? "main__wrapper" : "main__wrapper-toggle"}>
 					{col && (
 						<aside className="aside">
@@ -48,8 +48,11 @@ function App() {
 						<Routes>
 							<Route path="/" element={<Home videos={videos} />} />
 							<Route path="/about" element={<About />} />
-							<Route path="/results" element={<Results />} />
-							<Route path="/watch/:id" element={<VideoPlayBack videos={videos}/>} />
+							<Route path="/results" element={<Results videos={videos} />} />
+							<Route
+								path="/watch/:id"
+								element={<VideoPlayBack videos={videos} />}
+							/>
 						</Routes>
 					</main>
 				</div>

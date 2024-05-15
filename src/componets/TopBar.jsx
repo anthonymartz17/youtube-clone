@@ -2,14 +2,24 @@ import classes from "../assets/styles/TopBar.module.css";
 import logo from "../assets/youtoo-icon.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { getVideos } from "../services/youtubeApi";
 
-export default function TopBar({setCol,col}) {
+export default function TopBar({ setCol, col, onGetVideosList }) {
+	const [query, setQuery] = useState("");
+
+	function searchVideos(e) {
+		e.preventDefault();
+		onGetVideosList(query);
+	}
 	return (
 		<header>
 			<nav className={classes.nav}>
 				<div className="flex gap-2 items-center ">
 					<div>
-						<i onClick={()=>setCol(!col)} className="fa-solid fa-bars cursor-pointer"></i>
+						<i
+							onClick={() => setCol(!col)}
+							className="fa-solid fa-bars cursor-pointer"
+						></i>
 					</div>
 
 					<Link to="/">
@@ -18,11 +28,13 @@ export default function TopBar({setCol,col}) {
 						</div>
 					</Link>
 				</div>
-				<form className={classes.nav__form}>
+				<form className={classes.nav__form} onSubmit={searchVideos}>
 					<input
 						className={classes.nav__searchbar}
 						type="text"
 						placeholder="Search"
+						onChange={(e) => setQuery(e.target.value)}
+						value={query}
 					/>
 				</form>
 			</nav>

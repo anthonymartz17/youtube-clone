@@ -18,19 +18,25 @@
 }
 
 .preview__vertical{
-	display: flex;
+	display: grid;
+	grid-template-columns: 35% 80fr;
+
+
 	gap: .5em;
 }
 
 .preview__thumbnailContainer {
 	border-radius: 10px;
-	width: 200px;
+	/* width: 200px; */
+
+	/* height: 150px; */
 	margin-bottom: 10px;
 }
 .preview__thumbnailContainer img {
 	border-radius: 10px;
 	max-width: 100%;
-	object-fit: contain;
+	/* max-height: 100%; */
+	object-fit: cover;
 }
 .preview__videoDescriptionVertical {
 	display: grid;
@@ -51,8 +57,10 @@
 }
 
 
-.preview__thumbnail-container img {
+.preview__thumbnail-container {
 	border-radius: 10px;
+	background-color: red;
+	border: 1px solid blue;
 }
 .preview__thumbnail-container img {
 	border-radius: 10px;
